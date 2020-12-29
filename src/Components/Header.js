@@ -12,7 +12,7 @@ import Nav from './Nav'
 function Header(props){
 
     const [cols, colSetter] = useState(false)
-    let P = <div className={`bg-${props.name}-500 h-10 fixed top-0 w-full z-2 shadow-lg`} onClick={() => colSetter(!cols)}> <Nav/> </div>
+    let P = <div className={`bg-${props.name}-500 h-10 fixed top-0 w-full z-1 shadow-lg`} onClick={() => colSetter(!cols)}> <Nav/> </div>
 
     return(
 
