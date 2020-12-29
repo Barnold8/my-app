@@ -1,6 +1,7 @@
 import React from 'react'
 import TestIMG from '../Test.jpg'
-import Scroller from './Scroller'
+import Learning from './Learning'
+import { motion, useMotionValue, useTransform } from "framer-motion"
 
 function Content(props){
 
@@ -9,8 +10,18 @@ function Content(props){
     return(
         <div className={`font-bold text-white bg-${props.name}-800  bottom-0 w-full h-auto shadow-lg `}>
            <br/> <br/>  {/*The breaks are here because tailwind insists the header needs to be above everything*/}
-            Content to be made, include some scrolling thing for shop items
-            <Scroller/>
+            
+            <motion.div 
+            animate={{scale:10, rotate:360, scale:1}}
+            transition={{ ease: "easeOut", times: [0, 0.2, 0.5,], }} 
+            className="text-center p-96"> 
+                                        Unique Walls                             
+            </motion.div>
+
+
+
+            {/*Animated title to go here}
+            <Learning/>*/}
         </div>
     )
 
