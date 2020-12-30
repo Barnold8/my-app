@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Nav from './Nav'
+import HBurger from './HBurger'
 
 //OLD CODE
 //bg-purple-800 h-10 fixed top-0 w-full z-2 shadow-lg"
@@ -18,6 +19,7 @@ function Header(props){
 
         <header>
             {P}
+            <HBurger className="z-2"/>
         </header>
 
 

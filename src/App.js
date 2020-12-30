@@ -6,7 +6,7 @@ import Footer from './Components/Footer'
 import { useState } from 'react';
 //<Content/
 
-
+  //NOTE! Frame is good for CSS animations that need their own positioning
 function App() {
   let [num, numSetter] = useState(0)
 
