@@ -11,7 +11,7 @@ function Footer(props){
         <footer className={`p-20 h-30 font-bold text-white bg-${props.name}-900  bottom-0 w-full`}>
 
             <div>
-            <img src={splash} className="z-0 -my-20 fixed"style={{width: 200, height:200}}></img>
+           
             
 
             </div>

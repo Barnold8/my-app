@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 
 //import Learning from './Learning'
 import { animate, motion} from "framer-motion"
-import { Frame } from "framer";
+
 
 
 
@@ -16,7 +16,7 @@ function Content(props){
 
     //I was originally going to have the bg be an image from unique walls but blurred. I then saw the footer at 800 next to the header and decided "This should be the background now"
 
-    //NOTE! Frame is good for CSS animations that need their own positioning
+  
 
     return(
         <div className={`font-bold text-white bg-${props.name}-800  bottom-0 w-full h-auto shadow-lg `}>
