@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import Nav from './Nav'
-import HBurger from './HBurger'
+
 
 //OLD CODE
+//import HBurger from './HBurger'
 //bg-purple-800 h-10 fixed top-0 w-full z-2 shadow-lg"
 
 //<div className={headerClass} onClick={() => colSetter(!cols)}>

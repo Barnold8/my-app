@@ -3,11 +3,14 @@ import React from 'react'
 //I was going to have text in body components be dependant on text files that the client could write himself giving him full control, however, this is getting silly for me trying this for hours for one feature
 
 
-function BodyComp(props){
+function AboutUs(props){
 
     let col = props.name
     let lowerCol = col.toLowerCase()
     let txt;
+
+    console.log(typeof(props.y))
+
     if(lowerCol === "white"){
 
         txt = "black"
@@ -29,4 +32,4 @@ function BodyComp(props){
 }
 
 
-export default BodyComp
+export default AboutUs

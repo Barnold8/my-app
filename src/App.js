@@ -4,7 +4,7 @@ import Header from './Components/Header'
 import Title from './Components/Title'
 import Footer from './Components/Footer'
 import { useState } from 'react';
-import BodyComp from './Components/BodyComp';
+import AboutUs from './Components/AboutUs';
 //<Content/
 
   //NOTE! Frame is good for CSS animations that need their own positioning
@@ -27,7 +27,7 @@ function App() {
     <Title name={cols[num]}/>
 
 
-    <BodyComp name="white" text="TEST"/>
+    <AboutUs name="white" text="TEST"/>
 
 
     <Footer name={cols[num]}/>
