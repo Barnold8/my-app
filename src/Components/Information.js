@@ -3,9 +3,9 @@ import React from 'react'
 //I was going to have text in body components be dependant on text files that the client could write himself giving him full control, however, this is getting silly for me trying this for hours for one feature
 
 
-function AboutUs(props){
+function Information(props){
 
-    let col = props.name
+    let col = props.colour
     let lowerCol = col.toLowerCase()
     let txt;
 
@@ -22,7 +22,7 @@ function AboutUs(props){
 
         <div className={`font-bold text-${txt} bg-${col} text-center w-full `}>
             
-                
+                {props.text}
 
         </div>
 
@@ -32,4 +32,4 @@ function AboutUs(props){
 }
 
 
-export default AboutUs
+export default Information
