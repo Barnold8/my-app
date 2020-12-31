@@ -12,7 +12,7 @@ import { animate, motion} from "framer-motion"
 
 
 
-function Content(props){
+function Title(props){
 
     //I was originally going to have the bg be an image from unique walls but blurred. I then saw the footer at 800 next to the header and decided "This should be the background now"
 
@@ -42,5 +42,5 @@ function Content(props){
 
 }
 
-export default Content
+export default Title
 

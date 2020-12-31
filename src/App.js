@@ -1,12 +1,16 @@
 
 // ALL IMPORTS - All important stuff I have made and isnt automatically generated will be found in "components"
 import Header from './Components/Header'
-import Content from './Components/Content'
+import Title from './Components/Title'
 import Footer from './Components/Footer'
 import { useState } from 'react';
+import BodyComp from './Components/BodyComp';
 //<Content/
 
   //NOTE! Frame is good for CSS animations that need their own positioning
+
+  
+
 function App() {
   let [num, numSetter] = useState(0)
 
@@ -17,10 +21,15 @@ function App() {
   return (
 
     <div>
+
     <Header name={cols[num]}/>
-    
     <button  onClick={() => numSetter(num + 1)} className="sticky  float-right p-2 text-white font-bold  " >Colour changer</button>
-    <Content name={cols[num]}/>
+    <Title name={cols[num]}/>
+
+
+    <BodyComp name="white" text="TEST"/>
+
+
     <Footer name={cols[num]}/>
     </div>
   );

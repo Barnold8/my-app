@@ -19,7 +19,7 @@ function Header(props){
 
         <header>
             {P}
-            <HBurger className="z-2"/>
+            {/* <HBurger className="z-2"/> */}
         </header>
 
 
