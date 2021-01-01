@@ -1,6 +1,7 @@
 import { motion } from 'framer';
 import React from 'react'
 import DraggableIcon from './DraggableIcon'
+import SocialMedia from './SocialMedia'
 
 //Images
 import twitter from '../Images/twitter.png'
@@ -17,13 +18,19 @@ function Footer(props){
 
         <footer className={`p-40 h-30 font-bold text-white bg-${props.name}-900  bottom-0 w-full`}>
 
+            <div className=" pl-32 -my-16 absolute text-xl">
+            <SocialMedia/></div>
+
             <div className={`absolute shadow-2xl border-opacity-100 border-4 pr-10 py-10 -my-4 border-width-10 border-${props.name}-700 bg-${props.name}-800`} >
                              {/*This div is for social media*/}
-                     <span>      
+
+                    
+                             
+
                      <a > <DraggableIcon image={twitter} className="object-top-left" text="Twitter" link="https://twitter.com/JayUniquewalls"/></a>
                      <a> <DraggableIcon image={facebook} className="object-right" text="Facebook" link="https://www.facebook.com/uniquewallsuk"/></a>
                      <a> <DraggableIcon image={youtube} className="object-right" text="Youtube" link="https://www.youtube.com/channel/UC7f3EEG9dgXsN00IyHkqzgQ"/></a>
-                     </span>  
+                       
 
             </div>
 
