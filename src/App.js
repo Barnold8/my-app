@@ -3,21 +3,23 @@
 import Header from './Components/Header'
 import Title from './Components/Title'
 import Footer from './Components/Footer'
-import { useState } from 'react';
-import Information from './Components/Information';
+import { useState } from 'react'
+import AboutUs from './Components/AboutUs'
+import Information from './Components/Information'
 //<Content/
 
   //NOTE! Frame is good for CSS animations that need their own positioning
 
-  
+  let About = <AboutUs/>
 
 function App() {
   let [num, numSetter] = useState(0)
 
   let cols = ["red","green","yellow","pink","purple","blue","indigo"] //Use colour for footer too
 
-  if(num >= cols.length){num = 0}
 
+  if(num >= cols.length){num = 0}
+  
   return (
 
     <div>
@@ -26,10 +28,9 @@ function App() {
     <button  onClick={() => numSetter(num + 1)} className="sticky  float-right p-2 text-white font-bold  " >Colour changer</button>
     <Title name={cols[num]}/>
 
+    <Information content={<AboutUs heightsize="800" number={num}/>} colour="FFF" />
 
-
-    <Information text="Start this tomorrow 01/01/2021" colour="white"/>
-
+   
 
     <Footer name={cols[num]}/>
     </div>

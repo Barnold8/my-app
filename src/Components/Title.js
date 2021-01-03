@@ -23,7 +23,7 @@ function Title(props){
            <br/> <br/>  {/*The breaks are here because tailwind insists the header needs to be above everything*/}
            
 
-            <motion.div className="text-center  p-22  z-0 border-b-1 border-white-900" style={{fontSize: "120px"}}
+            <motion.div className="text-center py-28   z-0 border-b-1 border-white-900" style={{fontSize: "120px", textShadow: "2px 2px #444444"}}
             animate={{scale:[0.5,1]}}
             
             > 

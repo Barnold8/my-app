@@ -73,7 +73,7 @@ class Letter{
        {Letter}
   
     </motion.div> 
-    console.log(` Keyframes: ${keyFrames}`)
+   // console.log(` Keyframes: ${keyFrames}`)
         }
   
     }
@@ -100,7 +100,7 @@ function SocialMedia(){
     
     return(
 
-        <div className="flex">
+        <div className="flex" style={{textShadow: "2px 2px #444444"}}>
 
             <div className="flex">
                 
