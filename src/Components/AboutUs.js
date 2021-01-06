@@ -1,11 +1,111 @@
 
 import React from 'react'
 import Staff from './Staff'
-import testIMG from '../Images/Box1.jpg'
 
 
+var w = window.innerWidth;
+var h = window.innerHeight
 
-var JayArray = []
+var JayArray = [
+
+    "I first started drawing about 15 years ago when my children first asked me draw a picture of 'The Lion King' for them.",
+    "From that first painting came lots of requests from family and friends.",
+    " The rest is history"
+]
+
+var HollyArray = [
+
+    "I'm Jay's  daughter and joined the family business in September 2014. My tasks include marketing, all aspects of admin and social media."
+
+]
+
+
+//I had a lightbulb moment and realised I dont need those functions in the spare code section
+
+//console.log(colArr)
+function AboutUs(props){
+    
+    let colArrays = [    // This 2D array will be sufficent enough to do the linear gradient but I am sure there is a more suited way of doing this. Hate that I had to hardcode it in the end
+        [153, 27, 27], [6,95,70], [146,64,14] ,[157,23,77], [91,33,182], [30,64,175] ,[55,48,163]
+    ]
+
+    const offset = 270
+
+    return(
+        <div style={{height:`${props.heightsize}px`,background:`linear-gradient(180deg, rgba(${colArrays[props.number][0]},${colArrays[props.number][1]},${colArrays[props.number][2]},1) 0%, rgba(255,255,255,1) 23%`}}>
+            
+            <div style={{fontSize: 60}} className="font-serif font-light w-full -my-14 py-72 text-gray-500"> About us!  </div>   {/* Title */}
+           
+
+            <div className=" -my-44  -py-44 text-gray-500 w-96 inline-block justify-center">  
+                    Despite our name, we dont only specialise in wall art! We are also known to make a variety of items. One of our most popular products is the Bespoke Storage Unit! All of our staff have had their DBS check and have passed! <br/><br/>
+                    Top tip! Have you tried dragging the social media icons?
+            </div> 
+        
+            <div style={{fontSize: 60}} className="font-serif font-light w-full py-9 text-gray-500"> Our Staff! </div>   {/* Title */}
+            <div className="static">
+                <Staff Name="Jay" 
+                
+                Role="Owner/Artist"
+                
+                TextArray={JayArray} 
+                
+                bg="#000"
+                
+                TextClass=" text-gray-500  py-20 -pr-20"
+
+                Left={210}
+
+                PLeft={w/2 - offset}
+                
+                Down={145}
+
+                PDown={-460}
+
+                /> 
+
+
+                <Staff Name="Holly"
+                
+                        Role="Admin/Assistant" 
+                        
+                        TextArray={HollyArray} 
+                        
+                        bg="#000"
+                        
+                        Left={210} 
+                        
+                        Down={145}
+
+                        TextClass="text-gray-500 py-20 -pr-20"
+                
+                        PLeft={w/2 - offset}
+
+                        PDown={-820}
+                />
+            </div>
+        </div>
+    )
+
+
+}
+
+
+export default AboutUs
+
+
+// Jay - Owner/Artist
+// 
+
+// 
+
+// 
+
+// 
+
+// Also, all our artists are DBS checked.
+// holly- admin assistant
+// 
 
 
 // function Hex2Den(ColString){
@@ -118,50 +218,3 @@ var JayArray = []
 
 //     return endArray
 // }
-
-//I had a lightbulb moment and realised I dont need those functions up above
-
-//console.log(colArr)
-function AboutUs(props){
-    
-    let colArrays = [    // This 2D array will be sufficent enough to do the linear gradient but I am sure there is a more suited way of doing this
-        [153, 27, 27], [6,95,70], [146,64,14] ,[157,23,77], [91,33,182], [30,64,175] ,[55,48,163]
-    ]
-
-    return(
-        <div style={{height:`${props.heightsize}px`,background:`linear-gradient(180deg, rgba(${colArrays[props.number][0]},${colArrays[props.number][1]},${colArrays[props.number][2]},1) 0%, rgba(255,255,255,1) 23%`}}>
-            <div style={{fontSize: 60}} className="font-serif font-light w-full py-40 text-gray-500"> About us!  </div>   {/* Title */}
-           
-
-            <div className="-py-96 text-gray-500 w-96 inline-block justify-center">  
-                    Despite our name, we dont only specialise in wall art! We are also known to make a variety of items. One of our most popular products is the Bespoke Storage Unit! <br/><br/>
-                    Top tip! Have you tried dragging the social media icons?
-            </div> 
-        
-            <div style={{fontSize: 60}} className="font-serif font-light w-full py-10 text-gray-500"> Our Staff! </div>   {/* Title */}
-
-            <Staff Name="Jay" Role="Owner/Artist" TextArray={JayArray} bg="#000"/>
-            
-            
-        </div>
-    )
-
-
-}
-
-
-export default AboutUs
-
-
-// Jay - Owner/Artist
-// I first started drawing about 15years ago when my children first asked me draw a picture of 'The Lion King' for them. I've never considered myself as an artist before but do have a great eye for detail. So, I gave it a go and was astounded by how good it was.... even if I do say so myself! As you can imagine, the kids soon asked me to draw anything and everything. Then came the question... "Can you draw a picture on my bedroom wall?". The passion was ignited....
-
-// From that first painting came lots of requests from family and friends.
-
-// Whilst painting, I still worked full-time and fitted my pastime around my work and family commitments. This carried on for a couple of years until other people were offering to pay me a proper wage to decorate their rooms. At this point came the big decision... which career path do I choose? My wife became pregnant with our fourth child (yes, fourth! We actually have five now!) and the I got offered a significant promotion. I took the safe option and had a successful career as an Operations Manager in a Construction company for over 10 years but I still kept my hand-in with the painting.
-
-// As the recession hit, the company folded and I was made redundant. After spending time at home being a 'house-husband' its time for a new challenge...
-
-// Also, all our artists are DBS checked.
-// holly- admin assistant
-// I'm Jay's  daughter and joined the family business in September 2014. My tasks include marketing, all aspects of admin and social media.

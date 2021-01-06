@@ -18,7 +18,7 @@ function Footer(props){
 
     return(
 
-        <footer className={`p-40 h-30 font-bold text-white bg-${props.name}-900  bottom-0 w-full `} style={{textShadow: "2px 2px #444444"}}>
+        <footer className={`p-56 h-30 font-bold text-white bg-${props.name}-900  bottom-0 w-full `} style={{textShadow: "2px 2px #444444"}}>
 
             <div className=" pl-32 -my-16 absolute text-xl">
             <SocialMedia/></div>
