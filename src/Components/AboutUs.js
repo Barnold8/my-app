@@ -43,7 +43,7 @@ function AboutUs(props){
             </div> 
         
             <div style={{fontSize: 60}} className="font-serif font-light w-full py-9 text-gray-500"> Our Staff! </div>   {/* Title */}
-            <div className="static">
+            <div className="staticw">
                 <Staff Name="Jay" 
                 
                 Role="Owner/Artist"
@@ -61,6 +61,8 @@ function AboutUs(props){
                 Down={145}
 
                 PDown={-460}
+
+        
 
                 /> 
 

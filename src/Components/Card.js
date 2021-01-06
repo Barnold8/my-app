@@ -1,33 +1,72 @@
 import { Frame, motion } from 'framer'
 import React, { useState } from 'react'
-import image from '../Images/Box2.jpg'
+
 
 function Card(props){
 
 
-    const [clicked, ClickedSetter] =  useState(false)
+    
+
+    const HigherBounds = 285
+    const LowerBounds = 155
+
+    let Amount = HigherBounds - LowerBounds
+
+    const [size, Sizer] = useState(LowerBounds);
+    const SetSize = () => Sizer(size+Amount) 
+
+
+
+    let Title, Content
+
+    if(size >= HigherBounds && size >= LowerBounds){
+
+        Amount = -Amount
+    
+      }
+
+
+    if(size >= HigherBounds){
+
+        Title = props.Title
+        Content = props.Content
+    }
+    else{
+
+        Title = null
+        Content = null
+
+    }
+
 
     return(
         <Frame
-        
+            className="text-white"
+            animate={{size}}
             backgroundColor={props.col}
-        
+            bottom={props.bottom}
+            left={props.left}
+            size={500}
+            onTap={SetSize}
+            radius={80}
+            image={props.Image}
         
         >
             
 
         <motion.div
-            className="float-left pr-8 pl-8 z-5 "
+            
             
            
             
         >
-            <img src={image} draggable="false" />
+           
             
             </motion.div>
 
 
-       
+            <div className="my-80 font-bold text-center text-8x1">{Title}</div>
+            <div className="-my-72 font-bold text-center text-8x1">{Content} </div>
 
             </Frame>
             
